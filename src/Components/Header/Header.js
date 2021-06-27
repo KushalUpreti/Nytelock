@@ -5,8 +5,21 @@ import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
 import { useState } from 'react';
 
-export default function Header() {
+export default function Header(props) {
     const [clicked, setClicked] = useState(false);
+
+    let headerClass = "";
+    if (props.scrollingDown && props.isFixed) {
+        headerClass = "hide";
+    }
+    if (!props.scrollingDown) {
+        headerClass = "show";
+    }
+    if (props.isFixed) {
+        headerClass += " isFixed";
+    } else {
+        headerClass = headerClass.replace(" isFixed", "");
+    }
 
     const clickHandler = () => {
         setClicked(prevState => {
@@ -14,7 +27,7 @@ export default function Header() {
         })
     }
 
-    return <header>
+    return <header className={headerClass}>
         <div className="header-container">
             <section className="header-flex-container">
 
@@ -45,7 +58,7 @@ export default function Header() {
                     </div>
                     <div className="right-search-container">
                         <SearchBtn clicked={clicked} clickHandler={clickHandler} />
-                        {clicked ? <SearchContainer /> : null}
+                        {clicked && !props.scrollingDown ? <SearchContainer /> : null}
                     </div>
                 </div>
             </section>
