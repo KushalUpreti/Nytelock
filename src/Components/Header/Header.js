@@ -1,5 +1,7 @@
 import './Header.css';
 import logo from '../../assets/noname';
+import AnimButton from '../AnimButton/AnimButton';
+
 export default function Header() {
     return <header>
         <div className="header-container">
@@ -28,10 +30,13 @@ export default function Header() {
 
                 <div className="right-container">
                     <div className="component-container">
-                        {/* Component goes here. */}
+                        <AnimButton text="Get a Quote" icon="fas fa-comment-dots" />
                     </div>
                     <div className="right-search-container">
-                        {/* Search and hamburger goes here. */}
+                        <span>
+                            <i className="fas fa-search"></i>
+                        </span>
+
                     </div>
                 </div>
             </section>

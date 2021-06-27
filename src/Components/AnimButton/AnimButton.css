@@ -1,0 +1,60 @@
+.container {
+  background-color: #ffcc29;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: #32325d40 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container > .expand {
+  width: 100%;
+  position: absolute;
+  opacity: 0.3;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.13) 60%,
+    rgba(255, 255, 255, 1) 81%
+  );
+  transition: width 0.3s linear;
+}
+
+.container > .expanding {
+  width: 100%;
+}
+
+.container > .contracting {
+  width: 0;
+}
+
+.container > .link-container {
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.container > .link-container > a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 0 5px 0 20px;
+}
+
+.container > .link-container > a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.container > .link-container > a > i {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.container > .link-container > a > p {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
