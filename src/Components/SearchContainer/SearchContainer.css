@@ -22,6 +22,7 @@
 .search-container > .search-form {
   box-sizing: border-box;
   padding: 35px 40px;
+  position: relative;
 }
 
 .search-container > .search-form > input[type="search"] {
@@ -35,4 +36,15 @@
 
 .search-container > .search-form > input[type="search"]:focus {
   outline: none;
+}
+
+.search-container > .search-form > .text-search-button {
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #ffcc29;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 37px;
+  right: 43px;
 }

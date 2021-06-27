@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from '../../assets/noname';
+// import logo from '../../assets/noname';
 import AnimButton from '../AnimButton/AnimButton';
 import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
@@ -21,7 +21,7 @@ export default function Header() {
                 <div className="logo-container">
                     <div className="padded-logo-container">
                         <a href="https://www.nytelock.com">
-                            <img alt="website-logo" src={logo} />
+                            <img alt="website-logo" src="https://nytelock.com/wp-content/uploads/2021/04/NL-Digital-Full.png" />
                         </a>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function Header() {
                         <ul className="unordered-list">
                             <li><a href="https://www.nytelock.com">Home</a></li>
                             <li><a href="https://www.nytelock.com">About</a></li>
-                            <li><a href="https://www.nytelock.com">Serivces ˅</a></li>
+                            <li><a href="https://www.nytelock.com">Services ˅</a></li>
                             <li><a href="https://www.nytelock.com">Portfolio</a></li>
                             <li><a href="https://www.nytelock.com">Blog</a></li>
                             <li><a href="https://www.nytelock.com">Contact</a></li>
