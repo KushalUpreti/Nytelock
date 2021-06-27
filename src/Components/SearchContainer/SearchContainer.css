@@ -1,0 +1,38 @@
+.search-container {
+  z-index: 10;
+  bottom: -120px;
+  left: -250px;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  animation-name: searchAnim;
+  animation-duration: 0.3s;
+}
+
+@keyframes searchAnim {
+  from {
+    bottom: -130px;
+  }
+  to {
+    bottom: -120px;
+  }
+}
+
+.search-container > .search-form {
+  box-sizing: border-box;
+  padding: 35px 40px;
+}
+
+.search-container > .search-form > input[type="search"] {
+  padding: 0 0 0 20px;
+  height: 45px;
+  width: 250px;
+  border-radius: 25px;
+  border-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+}
+
+.search-container > .search-form > input[type="search"]:focus {
+  outline: none;
+}

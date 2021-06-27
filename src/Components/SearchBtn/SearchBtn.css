@@ -1,0 +1,11 @@
+.search-button {
+  z-index: 0;
+  padding: 15px;
+  border-radius: 100%;
+  background-color: #f0f6ff;
+  cursor: pointer;
+}
+
+.search-button > i {
+  min-width: 20px;
+}

@@ -71,6 +71,7 @@ header
 
 .mid-link-container > .links-container > .unordered-list > li > a {
   color: #6f6f6f;
+  white-space: nowrap;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem;
@@ -107,6 +108,7 @@ header
 
 .right-container > .right-search-container {
   margin: 0 20px 0 40px;
+  position: relative;
 }
 
 .right-container > .right-search-container > span {

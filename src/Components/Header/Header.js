@@ -1,8 +1,19 @@
 import './Header.css';
 import logo from '../../assets/noname';
 import AnimButton from '../AnimButton/AnimButton';
+import SearchBtn from '../SearchBtn/SearchBtn';
+import SearchContainer from '../SearchContainer/SearchContainer';
+import { useState } from 'react';
 
 export default function Header() {
+    const [clicked, setClicked] = useState(false);
+
+    const clickHandler = () => {
+        setClicked(prevState => {
+            return !prevState;
+        })
+    }
+
     return <header>
         <div className="header-container">
             <section className="header-flex-container">
@@ -33,10 +44,8 @@ export default function Header() {
                         <AnimButton text="Get a Quote" icon="fas fa-comment-dots" />
                     </div>
                     <div className="right-search-container">
-                        <span>
-                            <i className="fas fa-search"></i>
-                        </span>
-
+                        <SearchBtn clicked={clicked} clickHandler={clickHandler} />
+                        {clicked ? <SearchContainer /> : null}
                     </div>
                 </div>
             </section>

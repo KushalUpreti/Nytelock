@@ -2,20 +2,20 @@
   background-color: #ffcc29;
   border-radius: 30px;
   position: relative;
-  min-width: 185px;
-  box-shadow: #32325d40 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  min-width: 195px;
+  box-shadow: 20px 20px 27px -20px rgba(0, 0, 0, 0.69);
 }
 
 .container > .expand {
   position: absolute;
   height: 100%;
-  border-radius: 0 0 0 30px;
+  border-radius: 0 0 0 25px;
   opacity: 0.3;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 0%,
+    rgb(255, 255, 255) 0%,
     rgba(255, 255, 255, 0.13) 60%,
-    rgba(255, 255, 255, 1) 81%
+    rgb(255, 255, 255) 81%
   );
   transition: width 0.3s linear;
 }
@@ -38,7 +38,7 @@
   color: black;
   display: flex;
   align-items: center;
-  padding: 0 5px 0 20px;
+  padding: 0 5px 0 30px;
 }
 
 .container > .link-container > a:hover {
