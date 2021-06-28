@@ -15,11 +15,11 @@ export default function Header(props) {
     if (!props.scrollingDown) {
         headerClass = "show";
     }
-    if (props.isFixed) {
-        headerClass += " isFixed";
-    } else {
-        headerClass = headerClass.replace(" isFixed", "");
-    }
+    // if (props.isFixed) {
+    //     headerClass += " isFixed";
+    // } else {
+    //     headerClass = headerClass.replace(" isFixed", "");
+    // }
 
     const clickHandler = () => {
         setClicked(prevState => {

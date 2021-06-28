@@ -48,3 +48,7 @@
   top: 37px;
   right: 43px;
 }
+
+.search-container > .search-form > .text-search-button:hover {
+  background-color: brown;
+}

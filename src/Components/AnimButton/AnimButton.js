@@ -16,7 +16,10 @@ export default function AnimButton(props) {
         <div className="link-container">
             <a href="https://www.example.com">
                 <p>{props.text}</p>
-                <i className={props.icon}></i>
+                <div className="icon-holder">
+                    <i className={props.icon}></i>
+                </div>
+
             </a>
         </div>
 

@@ -42,16 +42,19 @@
 }
 
 .container > .link-container > a:hover {
-  color: white;
+  color: brown;
   text-decoration: underline;
 }
 
-.container > .link-container > a > i {
-  width: 40px;
-  height: 40px;
+.container > .link-container > a > .icon-holder {
+  padding: 10px 10px;
+  margin-left: 20px;
   background-color: white;
   border-radius: 50%;
-  margin-left: 20px;
+}
+
+.container > .link-container > a > .icon-holder > i {
+  font-size: 20px;
 }
 
 .container > .link-container > a > p {
