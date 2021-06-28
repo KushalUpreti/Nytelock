@@ -4,6 +4,7 @@
   left: -30px;
   width: 330px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
   border-radius: 15px;
   z-index: 99;
 }
@@ -72,3 +73,6 @@
   font-weight: 500;
   list-style: disc;
 }
+
+/* 9847345099
+1301370003936607 */

@@ -14,7 +14,7 @@ export default function AnimButton(props) {
         <div className={hovering ? "expand expanding" : "expand contracting"}></div>
 
         <div className="link-container">
-            <a href="https://www.example.com">
+            <a href={props.link}>
                 <p>{props.text}</p>
                 <div className="icon-holder">
                     <i className={props.icon}></i>

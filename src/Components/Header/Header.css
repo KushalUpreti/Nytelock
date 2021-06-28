@@ -5,6 +5,8 @@ header {
   height: 85px;
   transition: 0.2s linear;
   position: fixed;
+  top: 0;
+  z-index: 99;
 }
 
 .hide {
@@ -21,6 +23,7 @@ header {
 
 header > .header-container {
   padding: 0 50px;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 25px 0px;
 }
 

@@ -1,0 +1,50 @@
+.parent-logo-container {
+  max-width: 1500px;
+  background: linear-gradient(
+    338deg,
+    rgba(48, 43, 43, 1) 0%,
+    rgba(30, 27, 27, 1) 52%,
+    rgba(42, 40, 40, 1) 84%,
+    rgba(43, 41, 41, 1) 92%
+  );
+  width: 98%;
+  height: 250px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.parent-logo-container > .text-button-container > .flex-text-button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 100px 50px 100px; /* Fix with media queries */
+}
+
+.parent-logo-container
+  > .text-button-container
+  > .flex-text-button-container
+  > .text-encloser
+  > h5 {
+  color: #ffcc29;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
+.parent-logo-container
+  > .text-button-container
+  > .flex-text-button-container
+  > .text-encloser
+  > h2 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 35px;
+  margin: 0;
+}
+
+.parent-logo-container
+  > .text-button-container
+  > .flex-text-button-container
+  > .button-encloser {
+  display: flex;
+  align-items: flex-end;
+}

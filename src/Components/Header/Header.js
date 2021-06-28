@@ -61,7 +61,7 @@ export default function Header(props) {
 
                 <div className="right-container">
                     <div className="component-container">
-                        <AnimButton text="Get a Quote" icon="fas fa-comment-dots" />
+                        <AnimButton text="Get a Quote" icon="fas fa-comment-dots" link="https://www.example.com" />
                     </div>
                     <div className="right-search-container">
                         <SearchBtn clicked={clicked} clickHandler={clickHandler} />
