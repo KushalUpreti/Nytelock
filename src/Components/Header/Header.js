@@ -3,10 +3,12 @@ import './Header.css';
 import AnimButton from '../AnimButton/AnimButton';
 import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
+import SubMenu from '../SubMenu/SubMenu';
 import { useState } from 'react';
 
 export default function Header(props) {
     const [clicked, setClicked] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
     let headerClass = "";
     if (props.scrollingDown && props.isFixed) {
@@ -44,11 +46,16 @@ export default function Header(props) {
                         <ul className="unordered-list">
                             <li><a href="https://www.nytelock.com">Home</a></li>
                             <li><a href="https://www.nytelock.com">About</a></li>
-                            <li><a href="https://www.nytelock.com">Services ˅</a></li>
+                            <li
+                                onMouseEnter={() => { setHovered(true) }}
+                                onMouseLeave={() => { setHovered(false) }}><a href="https://www.nytelock.com">Services ˅</a>
+                                <SubMenu class={hovered ? "showSubMenu" : "hideSubMenu"} />
+                            </li>
                             <li><a href="https://www.nytelock.com">Portfolio</a></li>
                             <li><a href="https://www.nytelock.com">Blog</a></li>
                             <li><a href="https://www.nytelock.com">Contact</a></li>
                         </ul>
+
                     </div>
                 </div>
 

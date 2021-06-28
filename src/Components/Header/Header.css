@@ -56,6 +56,7 @@ header
   > .links-container {
   height: 100%;
   padding: 0 0 0 80px;
+  position: relative;
 }
 
 header
@@ -81,6 +82,8 @@ header
   > .unordered-list
   > li {
   padding: 0 20px;
+  height: 50px;
+  margin-top: 25px;
 }
 
 .mid-link-container > .links-container > .unordered-list > li > a {
@@ -92,6 +95,9 @@ header
   font-family: "Montserrat", sans-serif;
   padding: 20px 0;
   transition: color 0.5s linear;
+}
+.mid-link-container > .links-container > .unordered-list > :nth-child(3) {
+  position: relative;
 }
 
 .mid-link-container > .links-container > .unordered-list > :nth-child(3) > a {

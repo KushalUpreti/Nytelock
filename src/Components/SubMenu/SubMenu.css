@@ -1,0 +1,74 @@
+.sub-menu-link-container {
+  position: absolute;
+  top: 50px;
+  left: -30px;
+  width: 330px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  z-index: 99;
+}
+.showSubMenu {
+  animation-name: showAnim;
+  animation-duration: 0.5s;
+  visibility: visible;
+}
+
+.hideSubMenu {
+  visibility: hidden;
+  animation-name: hideAnim;
+  animation-duration: 0.5s;
+}
+
+@keyframes showAnim {
+  from {
+    top: 80px;
+    opacity: 0;
+  }
+  to {
+    top: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes hideAnim {
+  from {
+    top: 50px;
+    opacity: 1;
+  }
+  to {
+    top: 80px;
+    opacity: 0;
+  }
+}
+
+.sub-menu-link-container > .inner-link-container {
+  padding: 20px 20px 20px 0;
+  text-align: left;
+}
+
+.sub-menu-link-container > .inner-link-container > .unordered-links {
+  list-style: none;
+}
+
+.sub-menu-link-container > .inner-link-container > .unordered-links > li {
+  padding: 10px 0;
+  transition: 0.3s linear;
+}
+
+.sub-menu-link-container
+  > .inner-link-container
+  > .unordered-links
+  > .hoverable:hover {
+  list-style: disc;
+  transform: translate(30px, 0);
+  text-decoration: underline;
+}
+
+.sub-menu-link-container > .inner-link-container > .unordered-links > li > a {
+  color: black;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #6f6f6f;
+  font-weight: 500;
+  list-style: disc;
+}
