@@ -1,8 +1,15 @@
 import './LogoStyleContainer.css';
 import AnimButton from '../AnimButton/AnimButton';
 import LogoChooser from '../LogoChooser/LogoChooser';
+import { useState } from 'react';
 
 export default function LogoStyleContainer() {
+    const [active, setActive] = useState("#ll");
+
+    const activeHandler = (logoLink) => {
+        setActive(logoLink);
+    }
+
     return <div className="parent-logo-container">
         <div className="common-container">
             <section className="text-button-container">
@@ -18,12 +25,48 @@ export default function LogoStyleContainer() {
             </section>
             <section className="logo-switch-container">
                 <div className="flex-logo-switch-container">
-                    <LogoChooser class="fas fa-italic" link="#ll" logoType={<p>Lettermark <br />Logos</p>} key={1} />
-                    <LogoChooser class="fab fa-weebly" link="#wl" logoType={<p>Wordmark <br />Logos</p>} key={2} />
-                    <LogoChooser class="fas fa-lemon" link="#pml" logoType={<p>Pictorial mark <br />Logos</p>} key={3} />
-                    <LogoChooser class="fab fa-artstation" link="#aml" logoType={<p>Abstract mark <br />Logos</p>} key={4} />
-                    <LogoChooser class="fas fa-theater-masks" link="#ml" logoType={<p>Mascot <br />Logos</p>} key={5} />
-                    <LogoChooser class="fas fa-puzzle-piece" link="#cl" logoType={<p>Combination <br />Logos</p>} key={6} />
+                    <LogoChooser
+                        active={active}
+                        class="fas fa-italic" link="#ll"
+                        logoType={<p>Lettermark <br />Logos</p>} key={1}
+                        activeHandler={activeHandler}
+                    />
+                    <LogoChooser
+                        active={active}
+                        class="fab fa-weebly" link="#wl"
+                        logoType={<p>Wordmark <br />Logos</p>}
+                        key={2}
+                        activeHandler={activeHandler}
+                    />
+                    <LogoChooser
+                        active={active}
+                        class="fas fa-lemon"
+                        link="#pml"
+                        logoType={<p>Pictorial mark <br />Logos</p>}
+                        key={3}
+                        activeHandler={activeHandler}
+                    />
+                    <LogoChooser
+                        active={active}
+                        class="fab fa-artstation"
+                        link="#aml"
+                        logoType={<p>Abstract mark <br />Logos</p>}
+                        key={4} activeHandler={activeHandler}
+                    />
+                    <LogoChooser
+                        active={active}
+                        class="fas fa-theater-masks"
+                        link="#ml"
+                        logoType={<p>Mascot <br />Logos</p>}
+                        key={5} activeHandler={activeHandler}
+                    />
+                    <LogoChooser
+                        active={active}
+                        class="fas fa-puzzle-piece"
+                        link="#cl"
+                        logoType={<p>Combination <br />Logos</p>}
+                        key={6} activeHandler={activeHandler}
+                    />
                 </div>
             </section>
         </div>
