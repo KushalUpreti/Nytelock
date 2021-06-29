@@ -40,7 +40,7 @@ function App() {
         <Header scrollingDown={scrollingDown} isFixed={isFixed} />
         <section className="body-section">
           <LogoStyleContainer />
-          <Canvas />
+          <Canvas totalParticles={150} />
         </section>
 
       </div>
