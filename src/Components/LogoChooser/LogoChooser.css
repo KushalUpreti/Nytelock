@@ -1,0 +1,51 @@
+.logo-chooser-container {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 155px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: block;
+  margin: 20px 15px;
+  transition: 0.1s linear;
+}
+
+.logo-chooser-container:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+
+.logo-chooser-container:hover .logo-chooser-link {
+  color: black;
+}
+
+.logo-chooser-container:hover .logo-chooser-link > .logo-type-image-container {
+  color: black;
+}
+
+.logo-chooser-container > a {
+  text-decoration: none;
+  padding: 35px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-decoration-color: black;
+}
+
+.logo-chooser-container > .logo-chooser-link > .logo-type-image-container {
+  color: #ffcc29;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.logo-chooser-container > .logo-chooser-link .logo-type-text-container {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.logo-chooser-container > .logo-chooser-link .logo-type-text-container > p {
+  margin: 0;
+}

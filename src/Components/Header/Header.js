@@ -11,7 +11,7 @@ export default function Header(props) {
     const [hovered, setHovered] = useState(false);
 
     let headerClass = "";
-    if (props.scrollingDown && props.isFixed) {
+    if (props.scrollingDown) {
         headerClass = "hide";
     }
     if (!props.scrollingDown) {

@@ -8,18 +8,24 @@
     rgba(43, 41, 41, 1) 92%
   );
   width: 98%;
-  height: 250px;
   margin: auto;
   border-radius: 20px;
 }
 
-.parent-logo-container > .text-button-container > .flex-text-button-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 100px 50px 100px; /* Fix with media queries */
+.parent-logo-container > .common-container {
+  padding: 100px 90px;
 }
 
 .parent-logo-container
+  > .common-container
+  > .text-button-container
+  > .flex-text-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parent-logo-container
+  > .common-container
   > .text-button-container
   > .flex-text-button-container
   > .text-encloser
@@ -29,7 +35,12 @@
   letter-spacing: 1px;
 }
 
+.parent-logo-container > .common-container > .text-button-container {
+  padding: 0 0 50px 0;
+}
+
 .parent-logo-container
+  > .common-container
   > .text-button-container
   > .flex-text-button-container
   > .text-encloser
@@ -42,9 +53,21 @@
 }
 
 .parent-logo-container
+  > .common-container
   > .text-button-container
   > .flex-text-button-container
   > .button-encloser {
   display: flex;
   align-items: flex-end;
+}
+
+.parent-logo-container > .common-container > .logo-switch-container {
+}
+
+.parent-logo-container
+  > .common-container
+  > .logo-switch-container
+  > .flex-logo-switch-container {
+  display: flex;
+  flex-wrap: wrap;
 }

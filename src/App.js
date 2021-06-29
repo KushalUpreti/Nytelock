@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import LogoStyleContainer from './Components/LogoStyleContainer/LogoStyleContainer';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [scrollingDown, setScrollingDown] = useState(false);
@@ -33,13 +34,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header scrollingDown={scrollingDown} isFixed={isFixed} />
-      <section className="body-section">
-        <LogoStyleContainer />
-      </section>
+    <BrowserRouter basename="/">
+      <div className="App">
+        <Header scrollingDown={scrollingDown} isFixed={isFixed} />
+        <section className="body-section">
+          <LogoStyleContainer />
+        </section>
 
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
