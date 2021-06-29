@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import LogoStyleContainer from './Components/LogoStyleContainer/LogoStyleContainer';
+import Canvas from './Components/Canvas/Canvas';
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Header scrollingDown={scrollingDown} isFixed={isFixed} />
         <section className="body-section">
           <LogoStyleContainer />
+          <Canvas />
         </section>
 
       </div>
