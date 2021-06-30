@@ -9,8 +9,9 @@ export default function Canvas(props) {
 
     useEffect(() => {
         const ctx = canvas.current.getContext('2d');
-        ctx.canvas.width = window.innerWidth - 50;
-        ctx.canvas.height = window.innerHeight;
+        let parent = document.querySelector(".text-n-logo-container");
+        ctx.canvas.width = parent.offsetWidth;
+        ctx.canvas.height = parent.offsetHeight;
 
         document.addEventListener('mousemove', (e) => { onMouseUpdate(e, ctx, canvas) }, false);
         window.addEventListener('resize', rePaint);
@@ -18,9 +19,9 @@ export default function Canvas(props) {
         animate(ctx);
 
         function rePaint() {
-            console.log("Called");
-            ctx.canvas.width = window.innerWidth;
-            ctx.canvas.height = window.innerHeight;
+            let parent = document.querySelector(".text-n-logo-container");
+            ctx.canvas.width = parent.offsetWidth;
+            ctx.canvas.height = parent.offsetHeight;
             particles = [];
             init();
         }
@@ -83,7 +84,7 @@ export default function Canvas(props) {
             let y = Math.random() * (window.innerHeight - size * 2);
             let dirX = (Math.random() * .4) - .2;
             let dirY = (Math.random() * .4) - .2;
-            let color = 'black';
+            let color = Math.ceil(Math.random() * 2) === 1 ? 'black' : '#918989';
 
             particles.push(new Particle(x, y, dirX, dirY, size, color));
         }

@@ -3,17 +3,18 @@ import AnimButton from '../AnimButton/AnimButton';
 import LogoChooser from '../LogoChooser/LogoChooser';
 import { useState } from 'react';
 
-export default function LogoStyleContainer() {
+export default function LogoStyleContainer(props) {
     const [active, setActive] = useState("#ll");
 
     const activeHandler = (logoLink) => {
         setActive(logoLink);
+        props.changeContent(logoLink);
     }
 
     return <div className="parent-logo-container">
         <div className="common-container">
             <section className="text-button-container">
-                <div className="flex-text-button-container"> {/* Flex */}
+                <div className="flex-text-button-container">
                     <div className="text-encloser">
                         <h5>HOW DO I KNOW WHICH LOGO STYLE IS RIGHT FOR ME?</h5>
                         <h2>Different Types of Logo Styles</h2>

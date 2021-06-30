@@ -9,6 +9,8 @@
 
 .text-n-logo-container > .padded-textnlogo-container {
   padding: 0 125px;
+  max-width: 1500px;
+  margin: auto;
 }
 
 .text-n-logo-container
@@ -23,6 +25,7 @@
   > .padded-textnlogo-container
   > .flex-text-n-logo-container
   > .logo-text-content {
+  max-width: 44%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -43,7 +46,7 @@
   > .logo-image-content {
   display: flex;
   align-items: center;
-  padding-left: 40px;
+  padding-left: 100px;
 }
 
 .text-n-logo-container
