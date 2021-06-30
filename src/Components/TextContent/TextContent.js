@@ -1,10 +1,17 @@
 import './TextContent.css';
 import Canvas from '../Canvas/Canvas';
+import { useEffect, useRef } from 'react';
 
 export default function TextContent(props) {
     let { title, para1, para2, logoLink } = props.content;
+    const divRef = useRef();
 
-    return <section className="text-n-logo-container">
+    useEffect(() => {
+        divRef.current.classList.remove("trigger-text-n-logo-anim");
+        divRef.current.classList.add("trigger-text-n-logo-anim");
+    }, [title])
+
+    return <section className="text-n-logo-container" ref={divRef}>
         <Canvas totalParticles={50} />
         <div className="padded-textnlogo-container">
             <div className="flex-text-n-logo-container">

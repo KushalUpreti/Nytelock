@@ -9,6 +9,7 @@ export default function SubMenu(props) {
                 <li style={{ listStyle: "disc", marginLeft: "20px" }}><a href="https://www.example.com">Logo Design</a></li>
                 <li className="hoverable"><a href="https://www.example.com">Name Card Design</a></li>
                 <li className="hoverable"><a href="https://www.example.com">Website Design & Development</a></li>
+                <li className="hoverable"><a href="https://www.example.com">Flyer Design</a></li>
                 <li className="hoverable"><a href="https://www.example.com">SEO & Keyword Analysis</a></li>
                 <li className="hoverable"><a href="https://www.example.com">Video Production</a></li>
             </ul>

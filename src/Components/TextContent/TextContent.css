@@ -7,6 +7,11 @@
   animation-duration: 1.3s;
 }
 
+.trigger-text-n-logo-anim {
+  animation-name: text-n-logo-fade-in;
+  animation-duration: 1.3s;
+}
+
 .text-n-logo-container > .padded-textnlogo-container {
   padding: 0 125px;
   max-width: 1500px;

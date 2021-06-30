@@ -4,11 +4,21 @@ import AnimButton from '../AnimButton/AnimButton';
 import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
 import SubMenu from '../SubMenu/SubMenu';
+import Sidedrawer from '../SideDrawer/Sidedrawer';
 import { useState } from 'react';
 
 export default function Header(props) {
     const [clicked, setClicked] = useState(false);
     const [hovered, setHovered] = useState(false);
+
+    const [drawer, setDrawer] = useState(false)
+
+    const showDrawerHandler = () => {
+        setDrawer(true)
+    }
+    const hideDrawerHandler = () => {
+        setDrawer(false)
+    }
 
     let headerClass = "";
     if (props.scrollingDown) {
@@ -67,8 +77,10 @@ export default function Header(props) {
                         <SearchBtn clicked={clicked} clickHandler={clickHandler} />
                         {clicked && !props.scrollingDown ? <SearchContainer /> : null}
                     </div>
+                    <div class="HamIcon" onClick={showDrawerHandler}><div></div><div></div><div></div></div>
                 </div>
             </section>
+            <Sidedrawer show={drawer} close={hideDrawerHandler} />
         </div>
     </header>
 }
