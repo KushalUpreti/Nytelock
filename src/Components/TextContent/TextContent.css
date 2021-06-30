@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+.text-n-logo-container {
+  position: relative;
+  padding: 30px 0;
+  animation-name: text-n-logo-fade-in;
+  animation-duration: 1.3s;
+}
+
+.text-n-logo-container > .padded-textnlogo-container {
+  padding: 0 125px;
+}
+
+.text-n-logo-container
+  > .padded-textnlogo-container
+  > .flex-text-n-logo-container {
+  display: flex;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.text-n-logo-container
+  > .padded-textnlogo-container
+  > .flex-text-n-logo-container
+  > .logo-text-content {
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo-text-content h2 {
+  font-size: 2.1rem;
+  color: rgb(36, 33, 33);
+}
+
+.logo-text-content p {
+  color: rgb(109, 107, 107);
+  line-height: 2;
+  margin: 5px 0;
+}
+
+.text-n-logo-container
+  > .padded-textnlogo-container
+  > .flex-text-n-logo-container
+  > .logo-image-content {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.text-n-logo-container
+  > .padded-textnlogo-container
+  > .flex-text-n-logo-container
+  > .logo-image-content
+  > img {
+  width: 100%;
+}
+
+@keyframes text-n-logo-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

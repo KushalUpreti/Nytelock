@@ -9,7 +9,7 @@ export default function Canvas(props) {
 
     useEffect(() => {
         const ctx = canvas.current.getContext('2d');
-        ctx.canvas.width = window.innerWidth;
+        ctx.canvas.width = window.innerWidth - 50;
         ctx.canvas.height = window.innerHeight;
 
         document.addEventListener('mousemove', (e) => { onMouseUpdate(e, ctx, canvas) }, false);
@@ -68,7 +68,7 @@ export default function Canvas(props) {
         if (this.x + this.size > canvas.width || this.x - this.size < 0) {
             this.dirX = - this.dirX;
         }
-        if (this.y + this.size > canvas.width || this.y - this.size < 0) {
+        if (this.y + this.size > canvas.height || this.y - this.size < 0) {
             this.dirY = - this.dirY;
         }
         this.x += this.dirX;

@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Components/Header/Header';
 import LogoStyleContainer from './Components/LogoStyleContainer/LogoStyleContainer';
 import Canvas from './Components/Canvas/Canvas';
+import TextContent from './Components/TextContent/TextContent';
+
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -26,11 +28,6 @@ function App() {
     } else {
       setScrollingDown(false);
     }
-    if (scrollRef.current > 80) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
     scrollRef.current = st;
   }
 
@@ -40,7 +37,7 @@ function App() {
         <Header scrollingDown={scrollingDown} isFixed={isFixed} />
         <section className="body-section">
           <LogoStyleContainer />
-          <Canvas totalParticles={150} />
+          <TextContent />
         </section>
 
       </div>
