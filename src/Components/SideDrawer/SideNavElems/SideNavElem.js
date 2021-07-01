@@ -18,7 +18,8 @@ const SideNavElem = (props) => {
                     <a href="#none" onClick={props.shut} >About</a>
                 </li>
                 <li>
-                    <a href="#none" onClick={subMenuHandler} >Services &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-caret-down"></i></a>
+                    <a href="#none" onClick={subMenuHandler} >Services &nbsp;&nbsp;&nbsp;&nbsp;
+                        {<i class={open ? "fa fa-caret-down i-arrow-rotate" : "fa fa-caret-down i-arrow-revert"}></i>}</a>
                     <div class={open ? "sub-menu-container sub-menu-show" : "sub-menu-container sub-menu-hide"}>
                         <ul className="sub-menu-ul">
                             <li>
