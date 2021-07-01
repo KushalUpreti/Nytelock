@@ -28,13 +28,15 @@ export default function Canvas(props) {
 
         return () => {
             let a = canvas;
-            a.current.removeEventListener('mousemove', (e) => { onMouseUpdate(e, ctx, canvas) }, false);
             window.removeEventListener('resize', rePaint);
+            if (!a.current) { return }
+            a.current.removeEventListener('mousemove', (e) => { onMouseUpdate(e, ctx, canvas) }, false);
         }
     }, [])
 
 
     function onMouseUpdate(e, ctx, canvas) {
+        if (!canvas.current) { return }
         let cRect = canvas.current.getBoundingClientRect();
         canvasX = Math.round(e.clientX - cRect.left);
         canvasY = Math.round(e.clientY - cRect.top);
@@ -114,7 +116,7 @@ export default function Canvas(props) {
     }
 
 
-    return <canvas ref={canvas} className="canvas">
+    return <canvas ref={canvas} className="canvas" >
 
     </canvas>
 }

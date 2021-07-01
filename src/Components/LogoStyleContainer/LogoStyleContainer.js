@@ -20,7 +20,7 @@ export default function LogoStyleContainer(props) {
                         <h2>Different Types of Logo Styles</h2>
                     </div>
                     <div className="button-encloser">
-                        <AnimButton text="Contact us" link="https://www.example.com" icon="fas fa-arrow-right" />
+                        <AnimButton text="Contact us" link="#none" icon="fas fa-arrow-right" />
                     </div>
                 </div>
             </section>

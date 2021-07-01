@@ -7,8 +7,14 @@ export default function TextContent(props) {
     const divRef = useRef();
 
     useEffect(() => {
-        divRef.current.classList.remove("trigger-text-n-logo-anim");
-        divRef.current.classList.add("trigger-text-n-logo-anim");
+        console.log(divRef.current.classList[1]);
+        if (divRef.current.classList[1] === "trigger-text-n-logo-anim") {
+            divRef.current.classList.remove("trigger-text-n-logo-anim");
+            divRef.current.classList.add("trigger-anim-initial");
+        } else {
+            divRef.current.classList.remove("trigger-anim-initial");
+            divRef.current.classList.add("trigger-text-n-logo-anim");
+        }
     }, [title])
 
     return <section className="text-n-logo-container" ref={divRef}>

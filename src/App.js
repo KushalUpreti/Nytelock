@@ -16,6 +16,7 @@ function App() {
     para2: "By utilizing just a few letters lettermark logos are effective at streamlining any company brand if they have a long name. ",
     logoLink: "https://nytelock.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-20-at-12.58.49-AM-1536x503.png"
   })
+  const [showLogoText, setShowLogoText] = useState(true);
 
   const scrollRef = useRef();
 
@@ -39,6 +40,9 @@ function App() {
   }
 
   function textLogoHandler(link) {
+    // setTimeout(() => {
+    //   setShowLogoText(false);
+    // }, 10)
     let obj;
     switch (link) {
       case "#ll":
@@ -115,6 +119,10 @@ function App() {
         }
     }
     setTextLogo(obj);
+    // setTimeout(() => {
+    //   setShowLogoText(false);
+    //   setShowLogoText(true);
+    // }, 10)
   }
 
   return (
@@ -123,7 +131,7 @@ function App() {
         <Header scrollingDown={scrollingDown} isFixed={isFixed} />
         <section className="body-section">
           <LogoStyleContainer changeContent={textLogoHandler} />
-          <TextContent content={textLogo} />
+          {showLogoText ? <TextContent content={textLogo} /> : null}
         </section>
       </div>
     </BrowserRouter>
