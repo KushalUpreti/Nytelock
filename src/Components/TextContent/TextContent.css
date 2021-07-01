@@ -70,3 +70,31 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .text-n-logo-container
+    > .padded-textnlogo-container
+    > .flex-text-n-logo-container {
+    flex-direction: column;
+  }
+
+  .text-n-logo-container
+    > .padded-textnlogo-container
+    > .flex-text-n-logo-container
+    > .logo-text-content {
+    max-width: 100%;
+  }
+
+  .text-n-logo-container
+    > .padded-textnlogo-container
+    > .flex-text-n-logo-container
+    > .logo-image-content {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .text-n-logo-container > .padded-textnlogo-container {
+    padding: 0 30px;
+  }
+}

@@ -5,6 +5,7 @@ import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
 import SubMenu from '../SubMenu/SubMenu';
 import Sidedrawer from '../SideDrawer/Sidedrawer';
+import logo from '../../assets/noname';
 import { useState } from 'react';
 
 export default function Header(props) {
@@ -46,7 +47,7 @@ export default function Header(props) {
                 <div className="logo-container">
                     <div className="padded-logo-container">
                         <a href="https://www.nytelock.com">
-                            <img alt="website-logo" src="https://nytelock.com/wp-content/uploads/2021/04/NL-Digital-Full.png" />
+                            <img alt="website-logo" src={logo} />
                         </a>
                     </div>
                 </div>
