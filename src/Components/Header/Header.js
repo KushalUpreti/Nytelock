@@ -1,5 +1,4 @@
 import './Header.css';
-// import logo from '../../assets/noname';
 import AnimButton from '../AnimButton/AnimButton';
 import SearchBtn from '../SearchBtn/SearchBtn';
 import SearchContainer from '../SearchContainer/SearchContainer';
@@ -28,11 +27,6 @@ export default function Header(props) {
     if (!props.scrollingDown) {
         headerClass = "show";
     }
-    // if (props.isFixed) {
-    //     headerClass += " isFixed";
-    // } else {
-    //     headerClass = headerClass.replace(" isFixed", "");
-    // }
 
     const clickHandler = () => {
         setClicked(prevState => {
@@ -55,16 +49,16 @@ export default function Header(props) {
                 <div className="mid-link-container">
                     <div className="links-container">
                         <ul className="unordered-list">
-                            <li><a href="#none">Home</a></li>
-                            <li><a href="#none">About</a></li>
+                            <LinkComponent title="Home" />
+                            <LinkComponent title="About" />
                             <li
                                 onMouseEnter={() => { setHovered(true) }}
                                 onMouseLeave={() => { setHovered(false) }}><a href="#none">Services ˅</a>
                                 <SubMenu class={hovered ? "showSubMenu" : "hideSubMenu"} />
                             </li>
-                            <li><a href="#none">Portfolio</a></li>
-                            <li><a href="#none">Blog</a></li>
-                            <li><a href="#none">Contact</a></li>
+                            <LinkComponent title="Portfolio" />
+                            <LinkComponent title="Blog" />
+                            <LinkComponent title="Contact" />
                         </ul>
 
                     </div>
@@ -84,4 +78,23 @@ export default function Header(props) {
             <Sidedrawer show={drawer} close={hideDrawerHandler} />
         </div>
     </header>
+}
+
+function LinkComponent(props) {
+    const [expanded, setExpanded] = useState(false);
+
+    return <li><a href="#none"
+        onMouseEnter={() => { setExpanded(true) }}
+        onMouseLeave={() => { setExpanded(false) }}>{props.title}</a>
+        <div className="nav-link-anim-flex">
+            <div className="div1-container" style={{ justifyContent: expanded ? "flex-end" : "flex-start" }}>
+                <div className={expanded ? "div1 div1-expand" : "div1 div1-contract"}>
+                </div>
+            </div>
+            <div className="div2-container" style={{ justifyContent: expanded ? "flex-start" : "flex-end" }}>
+                <div className={expanded ? "div2 div2-expand" : "div2 div2-contract"}>
+                </div>
+            </div>
+        </div>
+    </li>
 }

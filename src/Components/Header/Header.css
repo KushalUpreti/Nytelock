@@ -108,7 +108,6 @@ header
   text-decoration-thickness: 0.13rem;
   text-decoration-color: rgba(90, 90, 90, 0.795);
   color: black;
-  border-bottom: 5px solid #ffcc29;
 }
 
 header > .header-container > .header-flex-container > .right-container {
@@ -194,6 +193,53 @@ header
   header > .header-container {
     padding: 0 130px;
   }
+}
+
+.unordered-list > li > .nav-link-anim-flex {
+  display: flex;
+  width: 100%;
+  padding: 22px 0;
+  justify-content: space-between;
+}
+
+.unordered-list > li > .nav-link-anim-flex > .div1-container {
+  display: flex;
+  width: 100%;
+}
+
+.unordered-list > li > .nav-link-anim-flex > .div2-container {
+  display: flex;
+  width: 100%;
+}
+
+.unordered-list > li > .nav-link-anim-flex > .div1-container > .div1 {
+  border-radius: 10px 0 0 10px;
+  background-color: #ffcc29;
+  height: 5px;
+  transition: width 0.3s ease-in;
+}
+
+.unordered-list > li > .nav-link-anim-flex > .div2-container > .div2 {
+  border-radius: 0 10px 10px 0;
+  background-color: #ffcc29;
+  height: 5px;
+  transition: width 0.3s ease-in;
+}
+
+.div1-expand {
+  width: 100%;
+}
+
+.div1-contract {
+  width: 0;
+}
+
+.div2-expand {
+  width: 100%;
+}
+
+.div2-contract {
+  width: 0;
 }
 
 @media screen and (max-width: 756px) {
